@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>Previsão – Gráfico</title>
+    <link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+<main class="container">
+    <div class="topbar">
+        <button class="backbtn" onclick="history.back()">← Voltar</button>
+        <h1 id="place" class="topbar__title">Previsão</h1>
+    </div>
+
+    <p id="subtitle" class="desc subtitle">—</p>
+
+    <canvas id="forecastChart" height="240" aria-label="Gráfico de temperatura e chuva"></canvas>
+
+    <!-- Linha de cartões resumidos por dia (legível para leigos) -->
+    <section class="forecast">
+        <h3 class="forecast__title">Resumo dos próximos dias</h3>
+        <div id="day-tiles" class="forecast-tiles"></div>
+    </section>
+</main>
+
+<!-- Chart.js e plugin de rótulos (DataLabels) via CDN -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2"></script>
+<!-- Lógica desta página -->
+<script src="forecast.js"></script>
+</body>
+</html>
